@@ -1,0 +1,536 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+    position: relative;
+    z-index: 1000;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px;
+    position: relative;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible; /* Ensure overflow is visible */
+}
+
+/* Hero Section */
+.hero {
+    background: #35424a;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    z-index: 500; /* Ensure hero section is below the header and dropdown */
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: #e8491d;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #d73c1b;
+}
+
+/* Features */
+.features {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features .feature {
+    padding: 20px;
+    margin: 20px;
+    background: #ffffff;
+    border: #cccccc 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Dropdown */
+.username {
+    color: #e8491d;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1500; /* Ensure dropdown is above other content */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .username {
+    background-color: #3e8e41;
+}
+
+/* Activities */
+.activities {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.activity-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.activity {
+    background: #ffffff;
+    border: #cccccc 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.activity-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.activity h3 {
+    margin-bottom: 10px;
+}
+
+.activity p {
+    margin-bottom: 10px;
+}
+
+.activity .btn {
+    background: #e8491d;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.activity .btn:hover {
+    background: #d73c1b;
+}
+
+.activity .btn.joined {
+    background: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.dashboard .user-info, .dashboard .user-activities {
+    margin-bottom: 30px;
+}
+
+.dashboard h3 {
+    margin-bottom: 20px;
+}
+
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard ul li {
+    background: #ffffff;
+    border: #cccccc 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border: #cccccc 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background: #e8491d;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.form-group button:hover {
+    background: #d73c1b;
+}
+
+.profile {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Admin Dashboard with Square Buttons */
+.admin-dashboard .admin-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.admin-dashboard .admin-options .btn-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background: #e8491d;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    transition: background 0.3s;
+}
+
+.admin-dashboard .admin-options .btn-square:hover {
+    background: #d73c1b;
+}
+
+/* Rewards */
+.rewards {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.reward-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.reward {
+    background: #ffffff;
+    border: #cccccc 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.reward-image {
+    width: 100%;
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 5px;
+}
+
+.reward h3 {
+    margin-bottom: 10px;
+}
+
+.reward p {
+    margin-bottom: 10px;
+}
+
+.reward .btn {
+    background: #e8491d;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.reward .btn:hover {
+    background: #d73c1b;
+}
+
+/* Manage Users */
+.manage-users {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+    background-color: #ddd;
+}
+
+.user-table th, .user-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #e8491d;
+    color: white;
+}
+
+.user-table td .form-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-table td .form-inline button {
+    margin-left: 5px;
+    background: #e8491d;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.user-table td .form-inline button:hover {
+    background: #d73c1b;
+}
+
+.user-table td .form-inline form {
+    display: inline;
+}
+
+.user-table td .form-inline .btn {
+    background: #e8491d;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+    margin-left: 5px;
+}
+
+.user-table td .form-inline .btn:hover {
+    background: #d73c1b;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.user-table th, .user-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+    color: black;  /* Changed header color to black */
+}
+
+.user-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
